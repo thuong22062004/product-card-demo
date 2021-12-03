@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, #4daf54, #3d8880);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+  --common-color:#4daf54;
+}
+.card{
+    width: 326px;
+    height:400px;
+    background-color: #272d40;
+    margin:120px auto;
+    border-radius: 15px;
+    padding: 20px;
+    color:white;
+    position: relative;
+    cursor: pointer;
+}
+.card__heart,.card__cart {
+    font-size: 25px;
+    position: absolute;
+    top: 15px;
+    z-index: 99999;
+}
+.card__heart{
+    left: 20px;
+}
+.card__cart{
+    right: 20px;
+}
+.card__img{
+    width:90%;
+    transition:  0.3s;
+}
+.img-day1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__title,.card__price{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition:  0.3s;
+}
+.card__title h3{
+    color:var(--common-color);
+}
+.card__size{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.card__size h2{
+    font-weight: unset;
+    margin-right: 12px;
+}
+.card__size span{
+    padding: 1px 5px;
+    background-color: #dadada;
+    margin: 0 2px;
+    border-radius: 5px;
+    color: #272d40;
+    cursor: pointer;
+}
+.card__color{
+    font-size: 15px;
+    display: flex;
+    align-items: center; 
+    padding: 5px 0 3px;
+}
+.card__color h2{
+    margin-right: 12px;
+    font-weight: unset;
+}
+.card__color span{
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.card__color-green{
+  background-color: var(--common-color);
+}
+.card__color-red{
+    background-color: red;
+  }
+  .card__color-black{
+    background-color: black;
+}
+.card__buttons button {
+    padding :10px 20px;
+    background-color: var(--common-color);
+    font-weight: 600;
+    margin-right: 7px;
+    outline: none;
+    border: none;
+    border-radius:5px;
+    cursor: pointer;
+}
+.card:hover .card__img{
+    transform:translateY(-90px) rotate(-20deg);
+}
+.card:hover .card__title {
+    transform: translate(-32px ,-70px);
+}
+.card:hover .card__price{
+    transform: translate(-121px ,-70px);
+}
+.contain_descri{
+    margin-top: 130px;
+    visibility: hidden;
+    opacity: 0;
+    transition:  0.3s;
+    transition-delay: 0.2s;
+}
+.heart-active{
+    color:red;
+    font-size: 25px;
+    display: none;
+    transition: linear 0.3s;
+    opacity: 0;
+}
+.card:hover .contain_descri{
+    margin-top: -30px;
+    visibility: visible;
+    opacity: 100;
+}
+.active .no-active{
+    display:none;
+}
+.active .heart-active{
+    display:block;
+    opacity:1;
+}
